@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "zonesoft.test";
+option java_outer_classname = "UnitProto";
+option objc_class_prefix = "HLW";
+
+package test;
+
+
+service Test {
+
+  rpc Get (TestRequest) returns (TestResponse) {}
+}
+
+
+message Empty {}
+
+message TestRequest {
+  string search = 1;
+}
+
+message TestResponse {
+    string response = 1;
+}
